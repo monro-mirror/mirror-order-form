@@ -42,24 +42,24 @@
         </form>
     </div>
 
-    <script>
-        function sendToWhatsApp() {
-            const mirrorSize = document.getElementById('mirrorSize').value;
-            const color = document.getElementById('color').value;
-            const address = document.getElementById('address').value;
-            const phone = document.getElementById('phone').value;
+<script>
+    function sendToWhatsApp() {
+        const mirrorSize = document.getElementById('mirrorSize').value;
+        const color = document.getElementById('color').value;
+        const address = document.getElementById('address').value;
+        const phone = document.getElementById('phone').value;
 
-            if (!mirrorSize || !color || !address || !phone) {
-                alert('Пожалуйста, заполните все поля формы.');
-                return;
-            }
-
-            const message = Новый заказ зеркала:\nРазмер: ${mirrorSize}\nЦвет: ${color}\nАдрес доставки: ${address}\nНомер телефона: ${phone};
-            const whatsappNumber = '+79221939224';
-            const whatsappUrl = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)};
-
-            window.open(whatsappUrl, '_blank');
+        if (!mirrorSize || !color || !address || !phone) {
+            alert('Пожалуйста, заполните все поля формы.');
+            return;
         }
-    </script>
+
+        const message = Новый заказ зеркала:\nРазмер: ${mirrorSize}\nЦвет: ${color}\nАдрес доставки: ${address}\nНомер телефона: ${phone};
+        const whatsappNumber = '+79221939224';
+        const whatsappUrl = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)};
+
+        window.location.href = whatsappUrl;
+    }
+</script>
 </body>
 </html>
