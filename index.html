@@ -57,7 +57,7 @@
 
         const message = 'Новый заказ зеркала:\nРазмер: ${mirrorSize}\nЦвет: ${color}\nАдрес доставки: ${address}\nНомер телефона: ${phone}';
         const whatsappNumber = '79221939224';
-        const whatsappUrl = https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)};
+        const whatsappUrl = 'https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}';
 
         window.location.href = whatsappUrl;
     }
